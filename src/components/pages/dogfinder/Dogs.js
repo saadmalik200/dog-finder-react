@@ -1,9 +1,12 @@
-import whiskey from "../../../images/whiskey.jpg";
-import hazel from "../../../images/hazel.jpg";
-import tubby from "../../../images/tubby.jpg";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-function Dogs({ dogs }) {
+function Dogs({ dogs, imgArr }) {
+  // const { name } = useParams();
+  // console.log("Param is", name);
+  console.log("img Arr", imgArr[0]);
+
+  // useEffect(() => {}, [imgArr[0]]);
+
   return (
     <div>
       <div className="flex justify-center m-4">
@@ -15,7 +18,7 @@ function Dogs({ dogs }) {
       <ul className="flex justify-center gap-[5rem] mt-[3rem]">
         {dogs.map((item, i) => {
           return (
-            <NavLink to={"/dogs/" + item.name}>
+            <NavLink key={i} to={"/dogs/" + item.name}>
               <li>
                 <div className=" w-[12rem] border-4 border-black rounded-full">
                   <img
@@ -24,50 +27,16 @@ function Dogs({ dogs }) {
                     alt=""
                   />
                 </div>
-                <p className="text-center mt-3">{item.name}</p>
+                <p className="text-center mt-3">
+                  {" "}
+                  {item.name.slice(0, 1).toUpperCase() + item.name.slice(1)}
+                </p>
               </li>
             </NavLink>
           );
         })}
-
-        {/* <NavLink to="/dogs/whiskey">
-          <li>
-            <div className=" w-[12rem] border-4 border-black rounded-full">
-              <img className=" rounded-full border-2" src={whiskey} alt="" />
-            </div>
-            <p className="text-center mt-3">Whiskey</p>
-          </li>
-        </NavLink>
-        <NavLink to="/dogs/hazel">
-          <li>
-            <div className=" w-[12rem] border-4 border-black rounded-full">
-              <img className=" rounded-full border-2" src={hazel} alt="" />
-            </div>
-            <p className="text-center mt-3">Hazel</p>
-          </li>
-        </NavLink>
-        <NavLink to="/dogs/tubby">
-          <li>
-            <div className=" w-[12rem] border-4 border-black rounded-full">
-              <img className=" rounded-full border-2" src={tubby} alt="" />
-            </div>
-            <p className="text-center mt-3">Tubby</p>
-          </li>
-        </NavLink> */}
       </ul>
     </div>
-    // <div>
-    //   {dogs.map((item, i) => {
-    //     return (
-    //       <Link key={i} to={`/dogs/${item.name}`}>
-    //         <div>
-    //           <p>{item.name}</p>
-    //           <p>{item.facts[0]}</p>
-    //         </div>
-    //       </Link>
-    //     );
-    //   })}
-    // </div>
   );
 }
 
