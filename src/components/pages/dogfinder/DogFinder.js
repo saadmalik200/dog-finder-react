@@ -50,6 +50,7 @@ function DogFinder() {
         <Route path="/dogs" element={<Dogs dogs={dogs} imgArr={imgArr} />} />
         <Route path="/" element={<Dogs dogs={dogs} imgArr={imgArr} />} />
         <Route path="/dogs/:name" element={<SingleDog dogs={dogs} />} />
+        <Route path="*" element={<Dogs dogs={dogs} imgArr={imgArr} />} />
       </Routes>
     </BrowserRouter>
   );

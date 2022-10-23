@@ -1,8 +1,12 @@
 {
   " name": "21-react-router-dog-finder",
+  "homepage": "https://saadmalik200.github.io/dog-finder-react",
   "version": "1.0.0",
   "description": "des",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "deploy2": "gh-pages -d build -o codecommit",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,6 +38,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.18",
+    "gh-pages": "^4.0.0",
     "tailwindcss": "^3.1.8"
   }
 }
