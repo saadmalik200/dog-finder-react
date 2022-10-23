@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/dog-finder-react/static/css/main.b3d7eb65.css",
+    "main.js": "/dog-finder-react/static/js/main.c1102c75.js",
+    "static/media/hazel.jpg": "/dog-finder-react/static/media/hazel.56f12732a1234fceb49b.jpg",
+    "static/media/whiskey.jpg": "/dog-finder-react/static/media/whiskey.7650f3f2b68e4bebacaa.jpg",
+    "static/media/tubby.jpg": "/dog-finder-react/static/media/tubby.9c06bf82b050f49b0a43.jpg",
+    "index.html": "/dog-finder-react/index.html",
+    "main.b3d7eb65.css.map": "/dog-finder-react/static/css/main.b3d7eb65.css.map",
+    "main.c1102c75.js.map": "/dog-finder-react/static/js/main.c1102c75.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b3d7eb65.css",
+    "static/js/main.c1102c75.js"
+  ]
+}
